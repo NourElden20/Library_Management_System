@@ -23,7 +23,7 @@ namespace Library_Management_System
     {
         public static bool IsLibrarian(Person p)
         {       
-            string Path = @"D:\Coding\Projects\Library Management System\Library Management System\Librarian.txt";
+            string Path = @"Librarian.txt";
             StreamReader sr = new StreamReader(Path);
             FileStream myFile = new FileStream(Path,FileMode.Open, FileAccess.Read);
             string record ;
@@ -42,7 +42,7 @@ namespace Library_Management_System
         public static bool IsCustomer(Person p)
         {
          
-            string Path = @"D:\Coding\Projects\Library Management System\Library Management System\Customers.txt";
+            string Path = @"Customers.txt";
             StreamReader sr = new StreamReader(Path);
             FileStream myFile = new FileStream(Path, FileMode.Open, FileAccess.Read);
             string record;

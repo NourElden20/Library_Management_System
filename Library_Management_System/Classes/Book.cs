@@ -77,11 +77,11 @@ namespace Library_Management_System
         public static Book EnterBookAttributes()
         {
             Console.Write("Enter Author Name: ");
-            string? Author = Console.ReadLine();
+            string Author = Console.ReadLine();
             Console.Write("Enter Name: ");
-            string? Name = Console.ReadLine();
+            string Name = Console.ReadLine();
             Console.Write("Enter Year: ");
-            string? Year = Console.ReadLine();
+            string Year = Console.ReadLine();
             Console.Write("Enter Price: ");
             double Price = double.Parse(Console.ReadLine());
             Console.Write("Enter Quantity: ");
