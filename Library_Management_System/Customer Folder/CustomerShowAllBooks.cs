@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Library_Management_System.Customer_Folder
 {
-    public partial class ClientParchaseForm : Form
+    public partial class CustomerShowAllBooks : Form
     {
-        public ClientParchaseForm()
+        public CustomerShowAllBooks()
         {
             InitializeComponent();
         }
 
-        private void Btn_Purshase_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Btn_Back_Click(object sender, EventArgs e)
+        private void Btn_ShowAvailableBooks_Click(object sender, EventArgs e)
         {
 
         }

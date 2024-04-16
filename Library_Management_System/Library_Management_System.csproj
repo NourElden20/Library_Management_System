@@ -50,11 +50,23 @@
     <Compile Include="Classes\Library.cs" />
     <Compile Include="Classes\UI.cs" />
     <Compile Include="Classes\User.cs" />
-    <Compile Include="Customer Folder\ClientParchaseForm.cs">
+    <Compile Include="Customer Folder\CustomerPurchaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer Folder\ClientParchaseForm.Designer.cs">
-      <DependentUpon>ClientParchaseForm.cs</DependentUpon>
+    <Compile Include="Customer Folder\CustomerPurchaseForm.Designer.cs">
+      <DependentUpon>CustomerPurchaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer Folder\CustomerBorrow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Folder\CustomerBorrow.Designer.cs">
+      <DependentUpon>CustomerBorrow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer Folder\CustomerShowAllBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Folder\CustomerShowAllBooks.Designer.cs">
+      <DependentUpon>CustomerShowAllBooks.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\ICustomer.cs" />
     <Compile Include="Interfaces\ILibrarian.cs" />
@@ -108,8 +120,14 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Customer Folder\ClientParchaseForm.resx">
-      <DependentUpon>ClientParchaseForm.cs</DependentUpon>
+    <EmbeddedResource Include="Customer Folder\CustomerBorrow.resx">
+      <DependentUpon>CustomerBorrow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Folder\CustomerPurchaseForm.resx">
+      <DependentUpon>CustomerPurchaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Folder\CustomerShowAllBooks.resx">
+      <DependentUpon>CustomerShowAllBooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Librarian Folder\AddNewBookForm.resx">
       <DependentUpon>AddNewBookForm.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace Library_Management_System.Customer_Folder
 {
-    partial class ClientParchaseForm
+    partial class CustomerPurchaseForm
     {
         /// <summary>
         /// Required designer variable.
