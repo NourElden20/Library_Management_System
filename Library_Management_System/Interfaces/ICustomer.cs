@@ -8,9 +8,9 @@ namespace Library_Management_System
 {
     public interface ICustomer
     {
-        public void ShowAvailableBooks();
-        public void Purchase();
-        public void Borrow();
+        void ShowAvailableBooks();
+        void Purchase();
+        void Borrow();
        
     }
 }

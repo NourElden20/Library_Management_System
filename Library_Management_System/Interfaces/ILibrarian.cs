@@ -8,10 +8,10 @@ namespace Library_Management_System
 {
     public interface ILibrarian
     {
-        public void ShowAllBooks();
-        public void AddNewBook();
-        public void DeleteBook();
-        public void UpdateBook();
+       void ShowAllBooks();
+       void AddNewBook();
+       void DeleteBook();
+       void UpdateBook();
 
     }
 }
