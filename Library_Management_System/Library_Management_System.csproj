@@ -46,12 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Book.cs" />
+    <Compile Include="Classes\Customer.cs" />
+    <Compile Include="Classes\Librarian.cs" />
+    <Compile Include="Classes\Library.cs" />
+    <Compile Include="Classes\UI.cs" />
+    <Compile Include="Classes\User.cs" />
     <Compile Include="Customer Folder\ClientParchaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Customer Folder\ClientParchaseForm.Designer.cs">
       <DependentUpon>ClientParchaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\ICustomer.cs" />
+    <Compile Include="Interfaces\ILibrarian.cs" />
     <Compile Include="Librarian Folder\AddNewBookForm.cs">
       <SubType>Form</SubType>
     </Compile>

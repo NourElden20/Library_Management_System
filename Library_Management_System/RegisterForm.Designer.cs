@@ -34,6 +34,8 @@ namespace Library_Management_System
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Btn_Login = new System.Windows.Forms.Button();
             this.Txt_Mail = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -41,8 +43,6 @@ namespace Library_Management_System
             this.Btn_Register = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.Btn_Login = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -79,6 +79,29 @@ namespace Library_Management_System
             this.groupBox3.Size = new System.Drawing.Size(331, 386);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Rockwell", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(88, 309);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(154, 19);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Have an account ? ";
+            // 
+            // Btn_Login
+            // 
+            this.Btn_Login.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Btn_Login.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.Btn_Login.Location = new System.Drawing.Point(100, 330);
+            this.Btn_Login.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Login.Name = "Btn_Login";
+            this.Btn_Login.Size = new System.Drawing.Size(124, 41);
+            this.Btn_Login.TabIndex = 12;
+            this.Btn_Login.Text = "Login";
+            this.Btn_Login.UseVisualStyleBackColor = false;
+            this.Btn_Login.Click += new System.EventHandler(this.Btn_Login_Click);
             // 
             // Txt_Mail
             // 
@@ -153,28 +176,6 @@ namespace Library_Management_System
             this.label2.Size = new System.Drawing.Size(138, 35);
             this.label2.TabIndex = 0;
             this.label2.Text = "Register";
-            // 
-            // Btn_Login
-            // 
-            this.Btn_Login.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Btn_Login.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.Btn_Login.Location = new System.Drawing.Point(100, 330);
-            this.Btn_Login.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Login.Name = "Btn_Login";
-            this.Btn_Login.Size = new System.Drawing.Size(124, 41);
-            this.Btn_Login.TabIndex = 12;
-            this.Btn_Login.Text = "Login";
-            this.Btn_Login.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Rockwell", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(88, 309);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 19);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Have an account ? ";
             // 
             // RegisterForm
             // 
