@@ -33,7 +33,7 @@ namespace Library_Management_System
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Form));
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1 = new Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.Btn_Customer = new System.Windows.Forms.Button();
