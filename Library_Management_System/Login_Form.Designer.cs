@@ -36,14 +36,14 @@ namespace Library_Management_System
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.Ptext1 = new System.Windows.Forms.TextBox();
+            this.txt_Email = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Etext1 = new System.Windows.Forms.TextBox();
+            this.txt_Password = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.Btn_Register = new System.Windows.Forms.Button();
-            this.Btn_Login = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.Btn_Login = new System.Windows.Forms.Button();
+            this.Btn_Register = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,13 +84,13 @@ namespace Library_Management_System
             this.label2.TabIndex = 0;
             this.label2.Text = " Login";
             // 
-            // Ptext1
+            // txt_Email
             // 
-            this.Ptext1.Location = new System.Drawing.Point(143, 113);
-            this.Ptext1.Margin = new System.Windows.Forms.Padding(2);
-            this.Ptext1.Name = "Ptext1";
-            this.Ptext1.Size = new System.Drawing.Size(212, 20);
-            this.Ptext1.TabIndex = 2;
+            this.txt_Email.Location = new System.Drawing.Point(143, 113);
+            this.txt_Email.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.Size = new System.Drawing.Size(212, 20);
+            this.txt_Email.TabIndex = 2;
             // 
             // pictureBox2
             // 
@@ -115,22 +115,22 @@ namespace Library_Management_System
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // Etext1
+            // txt_Password
             // 
-            this.Etext1.Location = new System.Drawing.Point(143, 192);
-            this.Etext1.Margin = new System.Windows.Forms.Padding(2);
-            this.Etext1.Name = "Etext1";
-            this.Etext1.Size = new System.Drawing.Size(212, 20);
-            this.Etext1.TabIndex = 2;
+            this.txt_Password.Location = new System.Drawing.Point(143, 192);
+            this.txt_Password.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Password.Name = "txt_Password";
+            this.txt_Password.Size = new System.Drawing.Size(212, 20);
+            this.txt_Password.TabIndex = 2;
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.Btn_Login);
-            this.groupBox3.Controls.Add(this.Etext1);
+            this.groupBox3.Controls.Add(this.txt_Password);
             this.groupBox3.Controls.Add(this.pictureBox1);
-            this.groupBox3.Controls.Add(this.Ptext1);
+            this.groupBox3.Controls.Add(this.txt_Email);
             this.groupBox3.Controls.Add(this.Btn_Register);
             this.groupBox3.Controls.Add(this.pictureBox2);
             this.groupBox3.Controls.Add(this.panel1);
@@ -143,18 +143,15 @@ namespace Library_Management_System
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             // 
-            // Btn_Register
+            // label3
             // 
-            this.Btn_Register.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Btn_Register.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.Btn_Register.Location = new System.Drawing.Point(143, 366);
-            this.Btn_Register.Margin = new System.Windows.Forms.Padding(2);
-            this.Btn_Register.Name = "Btn_Register";
-            this.Btn_Register.Size = new System.Drawing.Size(124, 41);
-            this.Btn_Register.TabIndex = 10;
-            this.Btn_Register.Text = "Register";
-            this.Btn_Register.UseVisualStyleBackColor = false;
-            this.Btn_Register.Click += new System.EventHandler(this.Btn_Register_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Rockwell", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(100, 345);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(231, 19);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Create new client account ? ";
             // 
             // Btn_Login
             // 
@@ -169,15 +166,18 @@ namespace Library_Management_System
             this.Btn_Login.UseVisualStyleBackColor = false;
             this.Btn_Login.Click += new System.EventHandler(this.Btn_Login_Click);
             // 
-            // label3
+            // Btn_Register
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Rockwell", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(100, 345);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(231, 19);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Create new client account ? ";
+            this.Btn_Register.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Btn_Register.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.Btn_Register.Location = new System.Drawing.Point(143, 366);
+            this.Btn_Register.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Register.Name = "Btn_Register";
+            this.Btn_Register.Size = new System.Drawing.Size(124, 41);
+            this.Btn_Register.TabIndex = 10;
+            this.Btn_Register.Text = "Register";
+            this.Btn_Register.UseVisualStyleBackColor = false;
+            this.Btn_Register.Click += new System.EventHandler(this.Btn_Register_Click);
             // 
             // Login_Form
             // 
@@ -191,7 +191,7 @@ namespace Library_Management_System
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login_Form";
-            this.Text = "Form1";
+            this.Text = "Login";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -208,10 +208,10 @@ namespace Library_Management_System
 
         private Panel panel1;
         private Label label2;
-        private TextBox Ptext1;
+        private TextBox txt_Email;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
-        private TextBox Etext1;
+        private TextBox txt_Password;
         private GroupBox groupBox3;
         private Button Btn_Register;
         private Button Btn_Login;

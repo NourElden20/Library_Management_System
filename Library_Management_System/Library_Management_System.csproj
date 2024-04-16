@@ -47,8 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Book.cs" />
-    <Compile Include="Classes\Customer.cs" />
-    <Compile Include="Classes\Librarian.cs" />
     <Compile Include="Classes\Library.cs" />
     <Compile Include="Classes\UI.cs" />
     <Compile Include="Classes\User.cs" />

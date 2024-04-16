@@ -42,7 +42,7 @@ namespace Library_Management_System
         public static bool IsCustomer(Person p)
         {
          
-            string Path = @"Customers.txt";
+            string Path = @"Customer.txt";
             StreamReader sr = new StreamReader(Path);
             FileStream myFile = new FileStream(Path, FileMode.Open, FileAccess.Read);
             string record;
@@ -59,13 +59,9 @@ namespace Library_Management_System
             return false;
         }
 
-        public static int CheckUser()
+        public static int CheckUser(string username, string password)
         {
-            Console.Write("Enter Username: ");
-            string username = Console.ReadLine();
-            Console.Write("Enter Password: ");
-            string password = Console.ReadLine();
-
+           
             Person p = new Person();
             
             if (IsLibrarian(p.SetPerson(username, password)))

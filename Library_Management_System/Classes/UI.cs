@@ -8,21 +8,18 @@ namespace Library_Management_System
 {
     static class UI
     {
-        static public void Login()
+        static public string Login(string P1 , string P2)
         {
-            int check = User.CheckUser();
+            int check = User.CheckUser(P1,P2);
             if (check == 1)
             {
-                Console.WriteLine("Librarian");
+                return("Librarian");
             }
             else if(check == 2)
             {
-                Console.WriteLine("Customer");
+                return ("Customer");
             }
-            else
-            {
-                Console.WriteLine("Invalid username or password");
-            }
+            return "";
         }
 
     }

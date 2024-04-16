@@ -48,6 +48,7 @@
             this.Btn_Delete.TabIndex = 34;
             this.Btn_Delete.Text = "Delete";
             this.Btn_Delete.UseVisualStyleBackColor = true;
+            this.Btn_Delete.Click += new System.EventHandler(this.Btn_Delete_Click);
             // 
             // Btn_Back
             // 
@@ -58,6 +59,7 @@
             this.Btn_Back.TabIndex = 33;
             this.Btn_Back.Text = "Back";
             this.Btn_Back.UseVisualStyleBackColor = true;
+            this.Btn_Back.Click += new System.EventHandler(this.Btn_Back_Click);
             // 
             // label1
             // 

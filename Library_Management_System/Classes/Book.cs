@@ -74,19 +74,8 @@ namespace Library_Management_System
             }
         }
 
-        public static Book EnterBookAttributes()
-        {
-            Console.Write("Enter Author Name: ");
-            string Author = Console.ReadLine();
-            Console.Write("Enter Name: ");
-            string Name = Console.ReadLine();
-            Console.Write("Enter Year: ");
-            string Year = Console.ReadLine();
-            Console.Write("Enter Price: ");
-            double Price = double.Parse(Console.ReadLine());
-            Console.Write("Enter Quantity: ");
-            double quantity = double.Parse(Console.ReadLine());
-
+        public static Book EnterBookAttributes(string Name,string Author,string Year,double Price,int quantity)
+        {           
             Book book = new Book(Name, Author, Year, Price, quantity);
             return book;
         }

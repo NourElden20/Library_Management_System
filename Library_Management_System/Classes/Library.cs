@@ -26,13 +26,13 @@ namespace Library_Management_System
             }
             Console.WriteLine("Book not found");
         }
-        public static void UpdateBook(int id)
+        public static void UpdateBook(int id, Book b2)
         {
             foreach (Book book in AvailableBooks)
             {
                 if (book.ID == id)
                 {
-                   Book b2 = new Book(Book.EnterBookAttributes());
+                  
                     book.Name = b2.Name;
                     book.Author = b2.Author;
                     book.Year = b2.Year;

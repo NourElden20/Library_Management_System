@@ -32,6 +32,8 @@
             this.Btn_Back = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Txt_ID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.labquantity = new System.Windows.Forms.Label();
             this.Txt_Author = new System.Windows.Forms.TextBox();
             this.labprice = new System.Windows.Forms.Label();
@@ -82,6 +84,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.Txt_ID);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.labquantity);
             this.groupBox1.Controls.Add(this.Txt_Author);
             this.groupBox1.Controls.Add(this.labprice);
@@ -100,12 +104,34 @@
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             // 
+            // Txt_ID
+            // 
+            this.Txt_ID.Location = new System.Drawing.Point(170, 3);
+            this.Txt_ID.Margin = new System.Windows.Forms.Padding(2);
+            this.Txt_ID.Multiline = true;
+            this.Txt_ID.Name = "Txt_ID";
+            this.Txt_ID.Size = new System.Drawing.Size(271, 22);
+            this.Txt_ID.TabIndex = 24;
+            this.Txt_ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 25);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "ID";
+            // 
             // labquantity
             // 
             this.labquantity.AutoSize = true;
             this.labquantity.BackColor = System.Drawing.Color.Transparent;
             this.labquantity.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
-            this.labquantity.Location = new System.Drawing.Point(0, 58);
+            this.labquantity.Location = new System.Drawing.Point(0, 85);
             this.labquantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labquantity.Name = "labquantity";
             this.labquantity.Size = new System.Drawing.Size(89, 25);
@@ -120,13 +146,14 @@
             this.Txt_Author.Name = "Txt_Author";
             this.Txt_Author.Size = new System.Drawing.Size(271, 22);
             this.Txt_Author.TabIndex = 21;
+            this.Txt_Author.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labprice
             // 
             this.labprice.AutoSize = true;
             this.labprice.BackColor = System.Drawing.Color.Transparent;
             this.labprice.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
-            this.labprice.Location = new System.Drawing.Point(0, 159);
+            this.labprice.Location = new System.Drawing.Point(0, 174);
             this.labprice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labprice.Name = "labprice";
             this.labprice.Size = new System.Drawing.Size(56, 25);
@@ -135,12 +162,13 @@
             // 
             // Txt_BookName
             // 
-            this.Txt_BookName.Location = new System.Drawing.Point(170, 15);
+            this.Txt_BookName.Location = new System.Drawing.Point(170, 40);
             this.Txt_BookName.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_BookName.Multiline = true;
             this.Txt_BookName.Name = "Txt_BookName";
             this.Txt_BookName.Size = new System.Drawing.Size(271, 22);
             this.Txt_BookName.TabIndex = 8;
+            this.Txt_BookName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labauther
             // 
@@ -156,37 +184,40 @@
             // 
             // Txt_Pubdate
             // 
-            this.Txt_Pubdate.Location = new System.Drawing.Point(170, 109);
+            this.Txt_Pubdate.Location = new System.Drawing.Point(170, 131);
             this.Txt_Pubdate.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Pubdate.Multiline = true;
             this.Txt_Pubdate.Name = "Txt_Pubdate";
             this.Txt_Pubdate.Size = new System.Drawing.Size(271, 22);
             this.Txt_Pubdate.TabIndex = 13;
+            this.Txt_Pubdate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Txt_Price
             // 
-            this.Txt_Price.Location = new System.Drawing.Point(170, 162);
+            this.Txt_Price.Location = new System.Drawing.Point(170, 174);
             this.Txt_Price.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Price.Multiline = true;
             this.Txt_Price.Name = "Txt_Price";
             this.Txt_Price.Size = new System.Drawing.Size(271, 22);
             this.Txt_Price.TabIndex = 14;
+            this.Txt_Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Txt_Quantity
             // 
-            this.Txt_Quantity.Location = new System.Drawing.Point(170, 58);
+            this.Txt_Quantity.Location = new System.Drawing.Point(170, 91);
             this.Txt_Quantity.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Quantity.Multiline = true;
             this.Txt_Quantity.Name = "Txt_Quantity";
             this.Txt_Quantity.Size = new System.Drawing.Size(271, 22);
             this.Txt_Quantity.TabIndex = 15;
+            this.Txt_Quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labpub
             // 
             this.labpub.AutoSize = true;
             this.labpub.BackColor = System.Drawing.Color.Transparent;
             this.labpub.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
-            this.labpub.Location = new System.Drawing.Point(0, 106);
+            this.labpub.Location = new System.Drawing.Point(0, 131);
             this.labpub.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labpub.Name = "labpub";
             this.labpub.Size = new System.Drawing.Size(156, 25);
@@ -198,7 +229,7 @@
             this.labbook.AutoSize = true;
             this.labbook.BackColor = System.Drawing.Color.Transparent;
             this.labbook.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
-            this.labbook.Location = new System.Drawing.Point(-11, 15);
+            this.labbook.Location = new System.Drawing.Point(-14, 40);
             this.labbook.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labbook.Name = "labbook";
             this.labbook.Size = new System.Drawing.Size(136, 25);
@@ -216,6 +247,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "UpdateBook";
             this.Text = "UpdateBook";
+            this.Load += new System.EventHandler(this.UpdateBook_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -239,5 +271,7 @@
         private System.Windows.Forms.TextBox Txt_Quantity;
         private System.Windows.Forms.Label labpub;
         private System.Windows.Forms.Label labbook;
+        private System.Windows.Forms.TextBox Txt_ID;
+        private System.Windows.Forms.Label label2;
     }
 }
