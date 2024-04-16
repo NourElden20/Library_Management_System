@@ -19,7 +19,7 @@ namespace Library_Management_System.Customer_Folder
 
         private void Btn_ShowAvailableBooks_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = Library.AvailableBooks.ToString();
         }
     }
 }

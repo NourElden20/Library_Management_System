@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Classes\Book.cs" />
     <Compile Include="Classes\Library.cs" />
+    <Compile Include="Classes\MyFile.cs" />
     <Compile Include="Classes\UI.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Customer Folder\CustomerPurchaseForm.cs">
@@ -68,8 +69,6 @@
     <Compile Include="Customer Folder\CustomerShowAllBooks.Designer.cs">
       <DependentUpon>CustomerShowAllBooks.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\ICustomer.cs" />
-    <Compile Include="Interfaces\ILibrarian.cs" />
     <Compile Include="Librarian Folder\AddNewBookForm.cs">
       <SubType>Form</SubType>
     </Compile>

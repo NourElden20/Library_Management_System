@@ -63,6 +63,7 @@
             this.Btn_ShowAvailableBooks.TabIndex = 35;
             this.Btn_ShowAvailableBooks.Text = "Show Available Books";
             this.Btn_ShowAvailableBooks.UseVisualStyleBackColor = true;
+            this.Btn_ShowAvailableBooks.Click += new System.EventHandler(this.Btn_ShowAvailableBooks_Click);
             // 
             // Btn_ShowBorrowedBooks
             // 

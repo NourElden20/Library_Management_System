@@ -10,7 +10,7 @@ namespace Library_Management_System
     {
         public static int id = 0;
 
-        int Bookid;
+        string Bookid = "0";
         string name = string.Empty;
         string author = string.Empty;
         string year = string.Empty;
@@ -49,7 +49,7 @@ namespace Library_Management_System
 
             set { year = value; }
         }
-        public int ID
+        public string ID
         {
             get { return Bookid; }
 
