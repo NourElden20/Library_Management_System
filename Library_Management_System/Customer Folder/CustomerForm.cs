@@ -18,25 +18,25 @@ namespace Library_Management_System
             InitializeComponent();
         }
 
-        private void Purchase_Click(object sender, EventArgs e)
+         
+        private void Btn_Borrow_Click(object sender, EventArgs e)
         {
-            
-        }
-     
-        private void Borrow_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void ShowAvailableBooks_Click(object sender, EventArgs e)
-        {
-            BtnBorrow.Visible = false;
-            Btn_purchase.Visible = false;
 
         }
 
-        
+        private void Btn_Show_Click(object sender, EventArgs e)
+        {
 
-        
+        }
+
+        private void Btn_purchase_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Logout_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

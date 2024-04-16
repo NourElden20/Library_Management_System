@@ -52,6 +52,36 @@
     <Compile Include="Customer Folder\ClientParchaseForm.Designer.cs">
       <DependentUpon>ClientParchaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Librarian Folder\AddNewBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Librarian Folder\AddNewBookForm.Designer.cs">
+      <DependentUpon>AddNewBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian Folder\DeleteBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Librarian Folder\DeleteBook.Designer.cs">
+      <DependentUpon>DeleteBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian Folder\LibrarianForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Librarian Folder\LibrarianForm.Designer.cs">
+      <DependentUpon>LibrarianForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian Folder\ShowAllBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Librarian Folder\ShowAllBooks.Designer.cs">
+      <DependentUpon>ShowAllBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian Folder\UpdateBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Librarian Folder\UpdateBook.Designer.cs">
+      <DependentUpon>UpdateBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +98,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Customer Folder\ClientParchaseForm.resx">
       <DependentUpon>ClientParchaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Librarian Folder\AddNewBookForm.resx">
+      <DependentUpon>AddNewBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Librarian Folder\DeleteBook.resx">
+      <DependentUpon>DeleteBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Librarian Folder\LibrarianForm.resx">
+      <DependentUpon>LibrarianForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Librarian Folder\ShowAllBooks.resx">
+      <DependentUpon>ShowAllBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Librarian Folder\UpdateBook.resx">
+      <DependentUpon>UpdateBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>

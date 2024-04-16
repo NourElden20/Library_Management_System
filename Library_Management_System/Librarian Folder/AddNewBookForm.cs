@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Library_Management_System.Customer_Folder
+namespace Library_Management_System.Librarian_Folder
 {
-    public partial class ClientParchaseForm : Form
+    public partial class AddNewBookForm : Form
     {
-        public ClientParchaseForm()
+        public AddNewBookForm()
         {
             InitializeComponent();
         }
 
-        private void Btn_Purshase_Click(object sender, EventArgs e)
+        private void Btn_Add_Click(object sender, EventArgs e)
         {
 
         }

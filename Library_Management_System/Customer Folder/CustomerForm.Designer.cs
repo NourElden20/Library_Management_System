@@ -40,8 +40,8 @@ namespace Library_Management_System
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerForm));
             this.Btn_Logout = new System.Windows.Forms.Button();
+            this.Btn_Show = new System.Windows.Forms.Button();
             this.Btn_Borrow = new System.Windows.Forms.Button();
-            this.BtnBorrow = new System.Windows.Forms.Button();
             this.Btn_purchase = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,7 +49,7 @@ namespace Library_Management_System
             // 
             // Btn_Logout
             // 
-            this.Btn_Logout.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Btn_Logout.BackColor = System.Drawing.Color.Gainsboro;
             this.Btn_Logout.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Btn_Logout.Location = new System.Drawing.Point(79, 388);
             this.Btn_Logout.Margin = new System.Windows.Forms.Padding(2);
@@ -58,34 +58,37 @@ namespace Library_Management_System
             this.Btn_Logout.TabIndex = 28;
             this.Btn_Logout.Text = "Logout";
             this.Btn_Logout.UseVisualStyleBackColor = false;
+            this.Btn_Logout.Click += new System.EventHandler(this.Btn_Logout_Click);
+            // 
+            // Btn_Show
+            // 
+            this.Btn_Show.BackColor = System.Drawing.Color.Gainsboro;
+            this.Btn_Show.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Show.Location = new System.Drawing.Point(79, 271);
+            this.Btn_Show.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_Show.Name = "Btn_Show";
+            this.Btn_Show.Size = new System.Drawing.Size(173, 54);
+            this.Btn_Show.TabIndex = 27;
+            this.Btn_Show.Text = "Show Available Books";
+            this.Btn_Show.UseVisualStyleBackColor = false;
+            this.Btn_Show.Click += new System.EventHandler(this.Btn_Show_Click);
             // 
             // Btn_Borrow
             // 
-            this.Btn_Borrow.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Btn_Borrow.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Borrow.Location = new System.Drawing.Point(79, 271);
+            this.Btn_Borrow.BackColor = System.Drawing.Color.Gainsboro;
+            this.Btn_Borrow.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.Btn_Borrow.Location = new System.Drawing.Point(79, 197);
             this.Btn_Borrow.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Borrow.Name = "Btn_Borrow";
             this.Btn_Borrow.Size = new System.Drawing.Size(173, 54);
-            this.Btn_Borrow.TabIndex = 27;
-            this.Btn_Borrow.Text = "Show Available Books";
+            this.Btn_Borrow.TabIndex = 26;
+            this.Btn_Borrow.Text = "Borrow";
             this.Btn_Borrow.UseVisualStyleBackColor = false;
-            // 
-            // BtnBorrow
-            // 
-            this.BtnBorrow.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BtnBorrow.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.BtnBorrow.Location = new System.Drawing.Point(79, 197);
-            this.BtnBorrow.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnBorrow.Name = "BtnBorrow";
-            this.BtnBorrow.Size = new System.Drawing.Size(173, 54);
-            this.BtnBorrow.TabIndex = 26;
-            this.BtnBorrow.Text = "Borrow";
-            this.BtnBorrow.UseVisualStyleBackColor = false;
+            this.Btn_Borrow.Click += new System.EventHandler(this.Btn_Borrow_Click);
             // 
             // Btn_purchase
             // 
-            this.Btn_purchase.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Btn_purchase.BackColor = System.Drawing.Color.Gainsboro;
             this.Btn_purchase.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.Btn_purchase.Location = new System.Drawing.Point(79, 127);
             this.Btn_purchase.Margin = new System.Windows.Forms.Padding(2);
@@ -94,6 +97,7 @@ namespace Library_Management_System
             this.Btn_purchase.TabIndex = 25;
             this.Btn_purchase.Text = "Purchase";
             this.Btn_purchase.UseVisualStyleBackColor = false;
+            this.Btn_purchase.Click += new System.EventHandler(this.Btn_purchase_Click);
             // 
             // pictureBox1
             // 
@@ -113,9 +117,9 @@ namespace Library_Management_System
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(346, 479);
             this.Controls.Add(this.Btn_Logout);
-            this.Controls.Add(this.Btn_Borrow);
+            this.Controls.Add(this.Btn_Show);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.BtnBorrow);
+            this.Controls.Add(this.Btn_Borrow);
             this.Controls.Add(this.Btn_purchase);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CustomerForm";
@@ -127,9 +131,9 @@ namespace Library_Management_System
 
         #endregion
         private PictureBox pictureBox1;
-        private Button BtnBorrow;
+        private Button Btn_Borrow;
         private Button Btn_purchase;
         private Button Btn_Logout;
-        private Button Btn_Borrow;
+        private Button Btn_Show;
     }
 }
