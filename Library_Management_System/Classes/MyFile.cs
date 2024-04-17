@@ -80,6 +80,23 @@ namespace Library_Management_System.Classes
 
           
         }
+        public static bool Search(int id,string Path)
+        {
+            FileStream myFile = new FileStream(Path, FileMode.Open, FileAccess.Read);
+            StreamReader sr = new StreamReader(myFile);
+            string record;
+            while ((record = sr.ReadLine()) != null)
+            {
+                string[] Fields = record.Split('|');
+                if (Fields[0].Trim() == id.ToString().Trim())
+                {
+                    return true;
+                }
+            }
+            sr.Close();
+            myFile.Close();
+            return false;
+        }
         public static string ShowFile(string Path, TextBox Place)
         {
             Place.Text = "ID\r\t|\r\tName\r\t|\r\tAuthor\r\t|\r\tQuantity\r\t|\r\tPrice\r|\r\tYear\r\n\r\n";

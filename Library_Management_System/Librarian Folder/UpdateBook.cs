@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using Library_Management_System.Classes;
 
 namespace Library_Management_System.Librarian_Folder
 {
@@ -31,9 +33,21 @@ namespace Library_Management_System.Librarian_Folder
             this.Close();
         }
 
-        private void UpdateBook_Load(object sender, EventArgs e)
-        {
+        
 
+        private void Btn_Search_Click(object sender, EventArgs e)
+        {
+            if(MyFile.Search(int.Parse(Txt_ID.Text), @"AvailableBooks.txt"))//Founded
+            {
+                groupBox1.Visible = true;
+                Btn_Update.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Book Not Found!", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                groupBox1.Visible = false;
+                Btn_Update.Enabled = false;
+            }
         }
     }
 }
