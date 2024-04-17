@@ -17,7 +17,7 @@ namespace Library_Management_System.Customer_Folder
             InitializeComponent();
         }
 
-        private void Btn_Purshase_Click(object sender, EventArgs e)
+        private void Btn_Purchase_Click(object sender, EventArgs e)
         {
             Library.PurchaseBook(Txt_BookName.Text, int.Parse(Txt_Quantity.Text));
         }

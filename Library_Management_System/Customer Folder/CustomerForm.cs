@@ -1,4 +1,5 @@
-﻿using Library_Management_System.Customer_Folder;
+﻿using Library_Management_System.Classes;
+using Library_Management_System.Customer_Folder;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace Library_Management_System
         public CustomerForm()
         {
             InitializeComponent();
+            MyFile.CreateFile(Library.AvailableBooks, @"AvailableBooksCustomer.txt");
         }
 
          

@@ -167,7 +167,7 @@
             this.Btn_Purshase.TabIndex = 23;
             this.Btn_Purshase.Text = "Purchase";
             this.Btn_Purshase.UseVisualStyleBackColor = true;
-            this.Btn_Purshase.Click += new System.EventHandler(this.Btn_Purshase_Click);
+            this.Btn_Purshase.Click += new System.EventHandler(this.Btn_Purchase_Click);
             // 
             // Btn_Back
             // 

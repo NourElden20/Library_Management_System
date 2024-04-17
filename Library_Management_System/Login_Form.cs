@@ -1,6 +1,7 @@
 using System;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Linq;
 
 namespace Library_Management_System
 {
@@ -9,6 +10,9 @@ namespace Library_Management_System
         public Login_Form()
         {
             InitializeComponent();
+            Library.ReadFromFile(Library.AvailableBooks, @"AvailableBooks.txt");
+            string id = Library.AvailableBooks.Last().ID;
+            Book.id = int.Parse(id) + 1;
         }            
 
         private void Btn_Register_Click(object sender, EventArgs e)

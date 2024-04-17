@@ -19,7 +19,7 @@ namespace Library_Management_System.Classes
             streamWriter.Close();
             fileStream.Close();
         }
-        public static void DeleteRecord(Book book, string Path)// for delete book in specific file
+        public static void DeleteRecord(List<Book> list,Book book, string Path)// for delete book in specific file
         {
             bool flag = false;
             FileStream myFile = new FileStream(Path, FileMode.Open, FileAccess.ReadWrite);
@@ -42,9 +42,9 @@ namespace Library_Management_System.Classes
 
             sr.Close();
             myFile.Close();
-            if(flag)UpdateRecord(book, Path, SecondaryKey);
+            if(flag)UpdateRecord(list, book, Path, SecondaryKey);
         }
-        public static void UpdateRecord(Book book, string Path, string SecondaryKey="")// for Update book in specific file
+        public static void UpdateRecord(List<Book> list,Book book, string Path, string SecondaryKey="")// for Update book in specific file
         {
             bool flag = false;
             FileStream myFile = new FileStream(Path, FileMode.Open, FileAccess.Read);
@@ -76,7 +76,7 @@ namespace Library_Management_System.Classes
             myFile.Close();
                
             
-            CreateFile(Path);
+            CreateFile(list,Path);
 
           
         }
@@ -115,17 +115,20 @@ namespace Library_Management_System.Classes
             return Place.Text;
 
         }
-        public static void CreateFile(string Path)
+        public static void CreateFile(List<Book> list,string Path)
         {
             FileStream fileStream = new FileStream(Path, FileMode.Create, FileAccess.Write);
             StreamWriter streamWriter = new StreamWriter(fileStream);
-            foreach (Book b in Library.AvailableBooks)
+            foreach (Book b in list)
             {
+                if(b.ID.Trim() != "*")
                 streamWriter.WriteLine(b.ID + " | " + b.Name + " | " + b.Author + " | " + b.Quantity + " | " + b.Price + " | " + b.Year);
             }
             streamWriter.Close();
             fileStream.Close();
         }
+       
+
 
     }
 }

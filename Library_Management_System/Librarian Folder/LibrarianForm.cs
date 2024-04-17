@@ -16,9 +16,7 @@ namespace Library_Management_System
         public LibrarianForm()
         {
             InitializeComponent();
-            Library.ReadFromFile(Library.AvailableBooks, @"AvailableBooks.txt");
-            string id = Library.AvailableBooks.Last().ID;
-            Book.id = int.Parse(id) + 1;
+           
         }    
         private void Btn_AddNewBook_Click(object sender, EventArgs e)
         {

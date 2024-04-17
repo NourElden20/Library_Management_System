@@ -51,7 +51,7 @@ namespace Library_Management_System
             {
                 if(book.ID.Trim() == id.ToString())
                 {
-                    MyFile.DeleteRecord(book, @"AvailableBooks.txt");
+                    MyFile.DeleteRecord(AvailableBooks, book, @"AvailableBooks.txt");
                     AllBooks.Remove(book);
                     AvailableBooks.Remove(book);
                     MessageBox.Show("Book Removed", "Event!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
@@ -67,7 +67,7 @@ namespace Library_Management_System
                 if (book.ID == id.ToString())
                 {
                     
-                    MyFile.UpdateRecord(book, @"AvailableBooks.txt");   
+                    MyFile.UpdateRecord(AvailableBooks,book, @"AvailableBooks.txt");   
             MessageBox.Show("Book Updated", "Event!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
                     return;
@@ -88,44 +88,49 @@ namespace Library_Management_System
         {
             foreach (Book book in AvailableBooks)
             {
-                if (book.Name == name)
+                if (book.Name.Trim() == name)
                 {
                    if(book.Quantity > quantity)
                     {
-                        Console.WriteLine("Book Purchased Successfully");
+                        MessageBox.Show("Book purchased Successfully", "Event!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                         book.Quantity -= quantity;
+                        BorrowedBooks.Add(book);
+
                         if (book.Quantity == 0)
                             RemoveBook(int.Parse(book.ID));
-
+                            
+                        UpdateBook(int.Parse(book.ID), book);
                         return;
                     }
                 }
             }
-            Console.WriteLine("Book not found");
+            MessageBox.Show("Book Not Found", "Error!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+
         }
         public static void BorrowBook(string name)
         {
             foreach (Book book in AvailableBooks)
             {
-                if (book.Name == name)
+                if (book.Name.Trim() == name)
                 {
                     if (book.Quantity > 1)
                     {
                         BorrowedBooks.Add(book);
-                        Console.WriteLine("Book Borrowed Successfully");
+                        MessageBox.Show("Book Borrowed Successfully", "Event!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);                       
                         book.Quantity -= 1;
-                        
+                        UpdateBook(int.Parse(book.ID), book);
 
                         return;
                     }
                     else if (book.Quantity == 1)
                     {
-                        Console.WriteLine("We cannot lend it");
-                        AvailableBooks.Remove(book);
+                        MessageBox.Show("We cannot lend it bec. QTY <= 1", "Warning!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                        return;
                     }
                 }
             }
-            Console.WriteLine("Book not found");
+            MessageBox.Show("Book Not Found", "Error!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+
         }
     }
 }

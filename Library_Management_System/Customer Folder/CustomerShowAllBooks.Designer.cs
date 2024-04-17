@@ -74,6 +74,7 @@
             this.Btn_Back.TabIndex = 39;
             this.Btn_Back.Text = "Back";
             this.Btn_Back.UseVisualStyleBackColor = true;
+            this.Btn_Back.Click += new System.EventHandler(this.Btn_Back_Click);
             // 
             // CustomerShowAllBooks
             // 
