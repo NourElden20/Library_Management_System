@@ -17,7 +17,8 @@ namespace Library_Management_System
         {
             InitializeComponent();
             Library.ReadFromFile(Library.AvailableBooks, @"AvailableBooks.txt");
-            Book.id = Library.AvailableBooks.Count;
+            string id = Library.AvailableBooks.Last().ID;
+            Book.id = int.Parse(id) + 1;
         }    
         private void Btn_AddNewBook_Click(object sender, EventArgs e)
         {
