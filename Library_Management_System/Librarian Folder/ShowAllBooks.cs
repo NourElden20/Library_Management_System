@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library_Management_System.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,7 @@ namespace Library_Management_System.Librarian_Folder
 
         private void Btn_ShowAvailableBooks_Click(object sender, EventArgs e)
         {
-
+            MyFile.ShowFile(@"AvailableBooks.txt", textBox1);
         }
     }
 }

@@ -30,6 +30,7 @@ namespace Library_Management_System
             myFile.Close();
           
         }
+        
         public static void WriteOnFile(List<Book> list,string Path) // For write lists in files (# un necessary) ( take books from list and write it as record in a file)
         {
             StreamWriter sr = new StreamWriter(Path);
@@ -69,11 +70,10 @@ namespace Library_Management_System
         }
         public static void AddBook(Book book)
         {
-            MyFile.AddRecord(book, @"AvailableBooks.txt");
-            AllBooks.Add(book);
-            AvailableBooks.Add(book);
             book.ID =  (++Book.id).ToString();   
-            
+            AvailableBooks.Add(book);
+            AllBooks.Add(book);
+            MyFile.AddRecord(book, @"AvailableBooks.txt");          
         }
         public static void PurchaseBook(string name , int quantity)
         {
@@ -86,7 +86,7 @@ namespace Library_Management_System
                         Console.WriteLine("Book Purchased Successfully");
                         book.Quantity -= quantity;
                         if (book.Quantity == 0)
-                            RemoveBook(book.ID);
+                            RemoveBook(int.Parse(book.ID));
 
                         return;
                     }

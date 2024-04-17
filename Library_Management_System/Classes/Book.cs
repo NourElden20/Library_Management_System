@@ -23,14 +23,17 @@ namespace Library_Management_System
             this.year = year;
             this.price = price;
             this.quantity = quantity;
+           
 
         }
         public Book(Book book)
         {
-            this.name = book.Name;
-            this.author = book.Author;
-            this.year = book.Year;
-            this.price = book.Price;
+           name = book.Name;
+           author = book.Author;
+           year = book.Year;
+           price = book.Price;
+           quantity = book.Quantity;
+           
         }
         public string Name {
             get { return name; }
@@ -74,9 +77,10 @@ namespace Library_Management_System
             }
         }
 
-        public static Book EnterBookAttributes(string Name,string Author,string Year,double Price,int quantity)
+        public static Book EnterBookAttributes(string Name,string Author,string Year,double Price, double quantity)
         {           
-            Book book = new Book(Name, Author, Year, Price, quantity);
+            Book book = new Book(Name, Author, Year, Price,quantity);
+           
             return book;
         }
         

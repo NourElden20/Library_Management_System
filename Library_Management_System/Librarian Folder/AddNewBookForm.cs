@@ -19,7 +19,7 @@ namespace Library_Management_System.Librarian_Folder
 
         private void Btn_Add_Click(object sender, EventArgs e)
         {
-            Book b2 = new Book(Book.EnterBookAttributes(Txt_BookName.Text, Txt_Author.Text, Txt_Pubdate.Text, double.Parse(Txt_Price.Text), int.Parse(Txt_Quantity.Text)));
+            Book b2 = new Book(Book.EnterBookAttributes(Txt_BookName.Text, Txt_Author.Text, Txt_Pubdate.Text, double.Parse(Txt_Price.Text), double.Parse(Txt_Quantity.Text)));
             Library.AddBook(b2);
         }
 
@@ -27,7 +27,7 @@ namespace Library_Management_System.Librarian_Folder
         {
             LibrarianForm librarianForm = new LibrarianForm();
             this.Hide();
-            librarianForm.ShowDialog();
+            librarianForm.ShowDialog(); 
             this.Close();
         }
     }
