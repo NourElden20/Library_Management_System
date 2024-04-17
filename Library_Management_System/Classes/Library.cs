@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Library_Management_System
 {
@@ -24,6 +25,7 @@ namespace Library_Management_System
             {
                 string[] Fields = record.Split('|');
                 Book book = new Book(Fields[1], Fields[2], Fields[5], double.Parse(Fields[4]), int.Parse(Fields[3]));
+                book.ID = Fields[0];
                 list.Add(book);
             }
             sr.Close();
@@ -47,11 +49,13 @@ namespace Library_Management_System
         {
             foreach (Book book in AvailableBooks)
             {
-                if(book.ID == id.ToString())
+                if(book.ID.Trim() == id.ToString())
                 {
                     MyFile.DeleteRecord(book, @"AvailableBooks.txt");
                     AllBooks.Remove(book);
                     AvailableBooks.Remove(book);
+                    MessageBox.Show("Book Removed", "Event!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
                     return;
                 }
             }
@@ -62,7 +66,10 @@ namespace Library_Management_System
             {
                 if (book.ID == id.ToString())
                 {
-                    MyFile.UpdateRecord(book, @"AvailableBooks.txt");                    
+                    
+                    MyFile.UpdateRecord(book, @"AvailableBooks.txt");   
+            MessageBox.Show("Book Updated", "Event!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
                     return;
                 }
             }
@@ -70,10 +77,12 @@ namespace Library_Management_System
         }
         public static void AddBook(Book book)
         {
-            book.ID =  (++Book.id).ToString();   
+            book.ID =  (Book.id).ToString();   
             AvailableBooks.Add(book);
             AllBooks.Add(book);
             MyFile.AddRecord(book, @"AvailableBooks.txt");          
+            MessageBox.Show("Book added", "Event!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            Book.id++;
         }
         public static void PurchaseBook(string name , int quantity)
         {

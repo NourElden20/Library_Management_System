@@ -16,44 +16,48 @@ namespace Library_Management_System.Classes
             FileStream fileStream = new FileStream(path, FileMode.Append, FileAccess.Write);
             StreamWriter streamWriter = new StreamWriter(fileStream);
             streamWriter.WriteLine(book.ID + " | " + book.Name + " | " + book.Author + " | " + book.Quantity + " | " +book.Price +" | " + book.Year);
-            MessageBox.Show("Book added", "Event!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-
             streamWriter.Close();
             fileStream.Close();
         }
         public static void DeleteRecord(Book book, string Path)// for delete book in specific file
         {
             bool flag = false;
-            StreamReader sr = new StreamReader(Path);
-            FileStream myFile = new FileStream(Path, FileMode.Open, FileAccess.Read);
+            FileStream myFile = new FileStream(Path, FileMode.Open, FileAccess.ReadWrite);
+            StreamReader sr = new StreamReader(myFile);
             string record;
+            string SecondaryKey ="";
             //Example of book attributes : ID 0 | Name 1 | Author 2 | Quantity 3 | Price 4 | Year 5 (As Written in file)
             while ((record = sr.ReadLine()) != null)
             {
                 string[] Fields = record.Split('|');
-                if(book.ID == Fields[0])
+                if(book.ID.Trim().Equals(Fields[0].Trim()))
                 {
-                    book.ID = " * ";
+                    SecondaryKey = Fields[0].Trim() + Fields[1].Trim();
+                    book.ID = " * ";                       
                     flag = true;
+                    break;
                 }
             }
             if(!flag) MessageBox.Show("Book not found", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
 
             sr.Close();
             myFile.Close();
+            if(flag)UpdateRecord(book, Path, SecondaryKey);
         }
-        public static void UpdateRecord(Book book, string Path)// for Update book in specific file
+        public static void UpdateRecord(Book book, string Path, string SecondaryKey="")// for Update book in specific file
         {
             bool flag = false;
-            StreamReader sr = new StreamReader(Path);
             FileStream myFile = new FileStream(Path, FileMode.Open, FileAccess.Read);
+            StreamReader sr = new StreamReader(myFile);
             string record;
             //Example of book attributes : ID 0 | Name 1 | Author 2 | Quantity 3 | Price 4 | Year 5 (As Written in file)
             while ((record = sr.ReadLine()) != null)
             {
                 string[] Fields = record.Split('|');
                 Book book2 = new Book(Fields[1], Fields[2], Fields[5], double.Parse(Fields[4]), int.Parse(Fields[3]));
-                if (book.ID == book2.ID)
+                book2.ID = Fields[0];
+                string SecondaryKey2 = book2.ID.Trim() + book2.Name.Trim();
+                if (SecondaryKey == SecondaryKey2)
                 {
                     book2.ID = book.ID;
                     book2.Name = book.Name;
@@ -62,12 +66,19 @@ namespace Library_Management_System.Classes
                     book2.Price = book.Price;
                     book2.Year = book.Year;
                     flag = true;
+                    break;
                 }
             }
+           
             if (!flag) MessageBox.Show("Book not found", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-
+            
             sr.Close();
             myFile.Close();
+               
+            
+            CreateFile(Path);
+
+          
         }
         public static string ShowFile(string Path, TextBox Place)
         {
@@ -87,5 +98,17 @@ namespace Library_Management_System.Classes
             return Place.Text;
 
         }
+        public static void CreateFile(string Path)
+        {
+            FileStream fileStream = new FileStream(Path, FileMode.Create, FileAccess.Write);
+            StreamWriter streamWriter = new StreamWriter(fileStream);
+            foreach (Book b in Library.AvailableBooks)
+            {
+                streamWriter.WriteLine(b.ID + " | " + b.Name + " | " + b.Author + " | " + b.Quantity + " | " + b.Price + " | " + b.Year);
+            }
+            streamWriter.Close();
+            fileStream.Close();
+        }
+
     }
 }

@@ -16,6 +16,8 @@ namespace Library_Management_System
         public LibrarianForm()
         {
             InitializeComponent();
+            Library.ReadFromFile(Library.AvailableBooks, @"AvailableBooks.txt");
+            Book.id = Library.AvailableBooks.Count;
         }    
         private void Btn_AddNewBook_Click(object sender, EventArgs e)
         {
@@ -63,6 +65,11 @@ namespace Library_Management_System
             this.Hide();
             form.ShowDialog();
             this.Close();
+        }
+
+        private void LibrarianForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

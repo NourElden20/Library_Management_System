@@ -71,7 +71,7 @@
             this.labquantity.AutoSize = true;
             this.labquantity.BackColor = System.Drawing.Color.Transparent;
             this.labquantity.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
-            this.labquantity.Location = new System.Drawing.Point(0, 58);
+            this.labquantity.Location = new System.Drawing.Point(4, 117);
             this.labquantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labquantity.Name = "labquantity";
             this.labquantity.Size = new System.Drawing.Size(89, 25);
@@ -80,7 +80,7 @@
             // 
             // Txt_Author
             // 
-            this.Txt_Author.Location = new System.Drawing.Point(170, 219);
+            this.Txt_Author.Location = new System.Drawing.Point(170, 62);
             this.Txt_Author.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Author.Multiline = true;
             this.Txt_Author.Name = "Txt_Author";
@@ -92,7 +92,7 @@
             this.labprice.AutoSize = true;
             this.labprice.BackColor = System.Drawing.Color.Transparent;
             this.labprice.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
-            this.labprice.Location = new System.Drawing.Point(4, 159);
+            this.labprice.Location = new System.Drawing.Point(4, 171);
             this.labprice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labprice.Name = "labprice";
             this.labprice.Size = new System.Drawing.Size(56, 25);
@@ -113,7 +113,7 @@
             this.labauther.AutoSize = true;
             this.labauther.BackColor = System.Drawing.Color.Transparent;
             this.labauther.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
-            this.labauther.Location = new System.Drawing.Point(4, 213);
+            this.labauther.Location = new System.Drawing.Point(0, 62);
             this.labauther.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labauther.Name = "labauther";
             this.labauther.Size = new System.Drawing.Size(132, 25);
@@ -122,7 +122,7 @@
             // 
             // Txt_Pubdate
             // 
-            this.Txt_Pubdate.Location = new System.Drawing.Point(170, 109);
+            this.Txt_Pubdate.Location = new System.Drawing.Point(170, 230);
             this.Txt_Pubdate.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Pubdate.Multiline = true;
             this.Txt_Pubdate.Name = "Txt_Pubdate";
@@ -131,7 +131,7 @@
             // 
             // Txt_Price
             // 
-            this.Txt_Price.Location = new System.Drawing.Point(170, 162);
+            this.Txt_Price.Location = new System.Drawing.Point(170, 177);
             this.Txt_Price.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Price.Multiline = true;
             this.Txt_Price.Name = "Txt_Price";
@@ -140,7 +140,7 @@
             // 
             // Txt_Quantity
             // 
-            this.Txt_Quantity.Location = new System.Drawing.Point(170, 58);
+            this.Txt_Quantity.Location = new System.Drawing.Point(170, 117);
             this.Txt_Quantity.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Quantity.Multiline = true;
             this.Txt_Quantity.Name = "Txt_Quantity";
@@ -152,7 +152,7 @@
             this.labpub.AutoSize = true;
             this.labpub.BackColor = System.Drawing.Color.Transparent;
             this.labpub.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
-            this.labpub.Location = new System.Drawing.Point(0, 106);
+            this.labpub.Location = new System.Drawing.Point(0, 227);
             this.labpub.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labpub.Name = "labpub";
             this.labpub.Size = new System.Drawing.Size(156, 25);

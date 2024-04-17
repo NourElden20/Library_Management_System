@@ -8,12 +8,12 @@ namespace Library_Management_System
 {
     public class Book
     {
-        public static int id = 0;
+        public static int id = 1;
 
-        string Bookid = "0";
-        string name = string.Empty;
-        string author = string.Empty;
-        string year = string.Empty;
+        string Bookid;
+        string name;
+        string author;
+        string year;
         double price;
         double quantity;
         public Book(string name, string author, string year, double price, double quantity)
@@ -23,7 +23,6 @@ namespace Library_Management_System
             this.year = year;
             this.price = price;
             this.quantity = quantity;
-           
 
         }
         public Book(Book book)

@@ -152,6 +152,7 @@ namespace Library_Management_System
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LibrarianForm";
             this.Text = "LibrarianForm";
+            this.Load += new System.EventHandler(this.LibrarianForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
