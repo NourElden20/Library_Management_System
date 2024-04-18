@@ -32,6 +32,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Btn_ShowAvailableBooks = new System.Windows.Forms.Button();
             this.Btn_ShowBorrowedBooks = new System.Windows.Forms.Button();
+            this.Btn_Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -57,7 +58,7 @@
             // Btn_ShowAvailableBooks
             // 
             this.Btn_ShowAvailableBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ShowAvailableBooks.Location = new System.Drawing.Point(160, 381);
+            this.Btn_ShowAvailableBooks.Location = new System.Drawing.Point(277, 381);
             this.Btn_ShowAvailableBooks.Name = "Btn_ShowAvailableBooks";
             this.Btn_ShowAvailableBooks.Size = new System.Drawing.Size(170, 48);
             this.Btn_ShowAvailableBooks.TabIndex = 35;
@@ -68,18 +69,31 @@
             // Btn_ShowBorrowedBooks
             // 
             this.Btn_ShowBorrowedBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ShowBorrowedBooks.Location = new System.Drawing.Point(408, 381);
+            this.Btn_ShowBorrowedBooks.Location = new System.Drawing.Point(53, 381);
             this.Btn_ShowBorrowedBooks.Name = "Btn_ShowBorrowedBooks";
             this.Btn_ShowBorrowedBooks.Size = new System.Drawing.Size(170, 48);
             this.Btn_ShowBorrowedBooks.TabIndex = 36;
             this.Btn_ShowBorrowedBooks.Text = "Show Borrowed Books";
             this.Btn_ShowBorrowedBooks.UseVisualStyleBackColor = true;
+            this.Btn_ShowBorrowedBooks.Click += new System.EventHandler(this.Btn_ShowBorrowedBooks_Click);
+            // 
+            // Btn_Back
+            // 
+            this.Btn_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Back.Location = new System.Drawing.Point(502, 388);
+            this.Btn_Back.Name = "Btn_Back";
+            this.Btn_Back.Size = new System.Drawing.Size(162, 41);
+            this.Btn_Back.TabIndex = 37;
+            this.Btn_Back.Text = "Back";
+            this.Btn_Back.UseVisualStyleBackColor = true;
+            this.Btn_Back.Click += new System.EventHandler(this.Btn_Back_Click_1);
             // 
             // ShowAllBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 450);
+            this.Controls.Add(this.Btn_Back);
             this.Controls.Add(this.Btn_ShowBorrowedBooks);
             this.Controls.Add(this.Btn_ShowAvailableBooks);
             this.Controls.Add(this.textBox1);
@@ -97,5 +111,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button Btn_ShowAvailableBooks;
         private System.Windows.Forms.Button Btn_ShowBorrowedBooks;
+        private System.Windows.Forms.Button Btn_Back;
     }
 }

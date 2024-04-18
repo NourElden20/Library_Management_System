@@ -57,7 +57,7 @@ namespace Library_Management_System.Classes
                 Book book2 = new Book(Fields[1], Fields[2], Fields[5], double.Parse(Fields[4]), int.Parse(Fields[3]));
                 book2.ID = Fields[0];
                 string SecondaryKey2 = book2.ID.Trim() + book2.Name.Trim();
-                if (SecondaryKey == SecondaryKey2)
+                if (SecondaryKey == SecondaryKey2 )
                 {
                     book2.ID = book.ID;
                     book2.Name = book.Name;
@@ -97,6 +97,7 @@ namespace Library_Management_System.Classes
             myFile.Close();
             return false;
         }
+        
         public static string ShowFile(string Path, TextBox Place)
         {
             Place.Text = "ID\r\t|\r\tName\r\t|\r\tAuthor\r\t|\r\tQuantity\r\t|\r\tPrice\r|\r\tYear\r\n\r\n";
@@ -121,13 +122,28 @@ namespace Library_Management_System.Classes
             StreamWriter streamWriter = new StreamWriter(fileStream);
             foreach (Book b in list)
             {
-                if(b.ID.Trim() != "*")
-                streamWriter.WriteLine(b.ID + " | " + b.Name + " | " + b.Author + " | " + b.Quantity + " | " + b.Price + " | " + b.Year);
+             
+             streamWriter.WriteLine(b.ID + " | " + b.Name + " | " + b.Author + " | " + b.Quantity + " | " + b.Price + " | " + b.Year);
+                
+                
             }
             streamWriter.Close();
             fileStream.Close();
         }
-       
+        public static void CreateFileCustomer(List<Book> list, string Path)
+        {
+            FileStream fileStream = new FileStream(Path, FileMode.Create, FileAccess.Write);
+            StreamWriter streamWriter = new StreamWriter(fileStream);
+            foreach (Book b in list)
+            {
+                if(b.ID.Trim() != "*")
+                streamWriter.WriteLine(b.ID + " | " + b.Name + " | " + b.Author + " | " + b.Quantity + " | " + b.Price + " | " + b.Year);
+
+
+            }
+            streamWriter.Close();
+            fileStream.Close();
+        }
 
 
     }

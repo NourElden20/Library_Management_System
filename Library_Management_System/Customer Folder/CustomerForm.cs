@@ -18,7 +18,6 @@ namespace Library_Management_System
         public CustomerForm()
         {
             InitializeComponent();
-            MyFile.CreateFile(Library.AvailableBooks, @"AvailableBooksCustomer.txt");
         }
 
          

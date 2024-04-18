@@ -2,6 +2,7 @@ using System;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Linq;
+using Library_Management_System.Classes;
 
 namespace Library_Management_System
 {
@@ -11,6 +12,8 @@ namespace Library_Management_System
         {
             InitializeComponent();
             Library.ReadFromFile(Library.AvailableBooks, @"AvailableBooks.txt");
+            Library.ReadFromFile(Library.BorrowedBooks, @"BorrowedBooks.txt");
+            MyFile.CreateFileCustomer(Library.AvailableBooks, @"AvailableBooksCustomer.txt");
             string id = Library.AvailableBooks.Last().ID;
             Book.id = int.Parse(id) + 1;
         }            
@@ -30,13 +33,13 @@ namespace Library_Management_System
             {
                 LibrarianForm form = new LibrarianForm();
                 form.ShowDialog();
-                this.Close();
+                this.Hide();
             }
             else if(UI.Login(txt_Email.Text, txt_Password.Text) == "Customer")
             {
                 CustomerForm form = new CustomerForm();
                 form.ShowDialog();
-                this.Close();
+                this.Hide();
             }
             else
             {

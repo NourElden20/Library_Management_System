@@ -66,9 +66,6 @@ namespace Library_Management_System
             this.Close();
         }
 
-        private void LibrarianForm_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

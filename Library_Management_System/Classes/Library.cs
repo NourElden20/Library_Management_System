@@ -64,11 +64,12 @@ namespace Library_Management_System
         {
             foreach (Book book in AvailableBooks)
             {
-                if (book.ID == id.ToString())
+                if (book.ID.Trim() == id.ToString())
                 {
-                    
-                    MyFile.UpdateRecord(AvailableBooks,book, @"AvailableBooks.txt");   
-            MessageBox.Show("Book Updated", "Event!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+                    MyFile.UpdateRecord(AvailableBooks, book, @"AvailableBooks.txt");
+
+                    MessageBox.Show("Book Updated", "Event!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
                     return;
                 }
@@ -90,18 +91,21 @@ namespace Library_Management_System
             {
                 if (book.Name.Trim() == name)
                 {
-                   if(book.Quantity > quantity)
+                   if(book.Quantity >= quantity)
                     {
                         MessageBox.Show("Book purchased Successfully", "Event!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                         book.Quantity -= quantity;
-                        BorrowedBooks.Add(book);
+
 
                         if (book.Quantity == 0)
+                        {
                             RemoveBook(int.Parse(book.ID));
-                            
+                            MyFile.DeleteRecord(AvailableBooks, book, @"AvailableBooks.txt");
+                        }
                         UpdateBook(int.Parse(book.ID), book);
                         return;
                     }
+                   
                 }
             }
             MessageBox.Show("Book Not Found", "Error!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
@@ -118,8 +122,8 @@ namespace Library_Management_System
                         BorrowedBooks.Add(book);
                         MessageBox.Show("Book Borrowed Successfully", "Event!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);                       
                         book.Quantity -= 1;
-                        UpdateBook(int.Parse(book.ID), book);
-
+                        UpdateBook(int.Parse(book.ID.Trim()), book);
+                        MyFile.AddRecord(book, @"BorrowedBooks.txt");
                         return;
                     }
                     else if (book.Quantity == 1)
